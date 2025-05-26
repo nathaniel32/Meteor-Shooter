@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title id="myTitle">Meteor Shooter Game</title>
+        
+        <link rel="icon" href="assets/image/meteor.ico" type="image/x-icon">
+
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="bingbot" content="index, follow">
+
+        <meta name="description" content="Meteor shooter game, offers a space experience. Compete with other players and achieve the highest achievements in this game.">
+        <meta name="keywords" content="online game, leaderboard, high scores, multiplayer, competition, gaming, serene game, meteor shooter, calming space game, relaxation, shooting game">
+        
+        <meta property="og:title" content="Meteor Shooter - Game">
+        <meta property="og:description" content="Meteor shooter game, offers a space experience. Compete with other players and achieve the highest achievements in this game.">
+        <meta property="og:image" content="assets/image/clickbait.jpg">
+        <meta property="og:url" content="/">
+
+        <link rel="canonical" href="/">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@MeteorShooter">
+        <meta name="twitter:title" content="Meteor Shooter - Space Game">
+        <meta name="twitter:description" content="Meteor shooter game, offers a space experience. Compete with other players and achieve the highest achievements in this game.">
+        <meta name="twitter:image" content="assets/image/clickbait.jpg">
+
+        <link rel="preload" href="assets/image/background.jpg" as="image">
+        <link rel="stylesheet" href="assets/style.css">
+        <meta name="theme-color" content="#000000">
+    </head>
+    <body>
+        <div class="bottomLeftControl">
+            <button id="autoShootBtn">Auto Shoot [E]</button>
+        </div>
+        <div class="topMidControl">
+            <div id="gameLevelBarContainer">
+                <div class="gameLevelBar">
+                    <div class="sp-nowarp">
+                        Level <span id="levelElement">1</span>
+                    </div>
+                    <div class="levelProgress">
+                        <div id="levelBar"></div>
+                    </div>
+                    <div class="sp-nowarp">
+                        Level <span id="nextLevelElement">2</span>
+                    </div>
+                </div>
+                <div>
+                    <span id="levelCurrent">0</span>/<span id="levelTarget">100</span>
+                </div>
+            </div>
+            <div>
+                <span id="msgElement"></span>
+            </div>
+        </div>
+        <div class="startBoardContainer">
+            <h1 class="h1">Meteor Shooter</h1>
+            <div class="startBoard">
+                <div id="startBoardLog">
+                    <div class="messageLog">Enter Username</div>
+                    <div class="logContainer">
+                        <input id="inputUsername" type="text" placeholder="Username">
+                        <button id="logStartGameBtn">Play</button>
+                    </div>
+                </div>
+                <div id="startBoardLastPoint">
+                    <div class="pointContainer">
+                        <span id="pointStart">0</span>
+                        <span class="pointStartText">Points</span>
+                    </div>
+                    <div id="BoardLastSetting">✖️</div>
+                    <button id="startGameBtn">Play</button>
+                </div>
+                <div id="startBoardHowToPlay">
+                    <span class="howToPlayTitle">Meteor Shooter Playing Guide</span>
+                    <ul class="howToPlayText sep-left">
+                        <li>Move the cursor towards the incoming meteors.</li>
+                        <li>Click the mouse to shoot the meteors.</li>
+                        <li>Press the <span class="sep-bold">'E'</span> on the keyboard to enable/disable autoshooter.
+                            <ul>
+                                <li>When automatic shooting is enabled, the meteor speed will increase.</li>
+                            </ul>
+                        </li>
+                        <li>Large meteors may require more than one shot.</li>
+                        <li>The game will end if a meteor hits you.</li>
+                    </ul>                    
+                </div>
+                <div class="startBoardBottom">
+                    <span class="howToPlayBtn sep-bold">how to play?</span>
+                </div>
+            </div>
+        </div>
+        <div class="rankContainer">
+            <div class="topScoreContainer">
+                <span class="topScoreText">Leaderboard</span>
+                <table>
+                    <thead>
+                        <tr class="trTitle"><th>No</th><th>Name</th><th>Point</th></tr>
+                    </thead>
+                    <tbody id="scoreList">
+                        <tr class="trBody">
+                            <td class="pointTopScoreGuest">----</td>
+                            <td class="pointTopScoreGuest">--------</td>
+                            <td class="pointTopScoreGuest">-------</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <canvas></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/display.js"></script>
+    </body>
+</html>
